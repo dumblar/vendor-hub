@@ -1,0 +1,279 @@
+.desktop-footer {
+  display: none;
+}
+
+.mobile-footer {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .desktop-footer {
+    display: block;
+  }
+}
+
+@media (max-width: 1279px) {
+  .mobile-footer {
+    display: block;
+  }
+}
+
+.desktop-footer .blue-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d4370;
+  padding: 7.5rem;
+}
+
+.desktop-footer .blue-container .container {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 7.5rem;
+}
+
+.desktop-footer .blue-container .container .right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.desktop-footer .blue-container .container .right-container .title {
+  font-family: "Holcim";
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.desktop-footer .blue-container .container .right-container .text {
+  font-family: "Holcim";
+  font-size: 1.15rem;
+  color: white;
+  line-height: 1.5;
+}
+
+.desktop-footer .blue-container .container .left-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.desktop-footer .blue-container .container .left-container .text-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.desktop-footer .blue-container .container .left-container .text-buttons a {
+  font-family: "Holcim";
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  line-height: 2.25rem;
+  margin-bottom: 0.3125rem;
+  text-decoration: none;
+}
+
+.desktop-footer .blue-container .container .left-container .buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.desktop-footer
+  .blue-container
+  .container
+  .left-container
+  .buttons
+  .social-networks-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.desktop-footer .blue-container .container .left-container .buttons button {
+  font-family: "Holcim";
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  background-color: #04bbf1;
+  color: white;
+  border-radius: 38px;
+  padding: 0.75rem 2.5rem 0.6875rem;
+  text-decoration: none;
+  border: none;
+}
+
+.desktop-footer
+  .blue-container
+  .container
+  .left-container
+  .buttons
+  button:hover {
+  background-color: white;
+  color: #1d4370;
+}
+
+.desktop-footer
+  .blue-container
+  .container
+  .left-container
+  .buttons
+  .social-networks-buttons
+  .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  width: 39px;
+  height: 37px;
+  border-radius: 25px;
+  margin-right: 0.625rem;
+}
+
+.desktop-footer .white-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 109px;
+  align-items: center;
+  color: black;
+  border-bottom: 11px solid #1d4370;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.desktop-footer .white-container .text-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.desktop-footer .white-container .text-buttons a {
+  color: black;
+  font-size: 1rem;
+  margin: 0.3125rem 0.625rem 0.3125rem 0;
+  text-decoration: none;
+}
+
+.desktop-footer .white-container .text-buttons .separator::after {
+  content: "|";
+  padding-left: 0.625rem;
+}
+
+.desktop-footer .blue-container .container .left-container .text-buttons a,
+.mobile-footer .blue-container .text-buttons a {
+  font-family: "Holcim";
+  font-weight: bold;
+  font-size: 1rem;
+  color: white; 
+  line-height: 2.25rem;
+  margin-bottom: 0.3125rem;
+  text-decoration: none; 
+  transition: color 0.3s, text-decoration 0.3s; 
+}
+
+/* Efecto hover */
+.desktop-footer .blue-container .container .left-container .text-buttons a:hover,
+.mobile-footer .blue-container .text-buttons a:hover {
+  color: #04bbf1; 
+  text-decoration: underline; 
+}
+
+
+/*---------------------------------------------------------------- MOBILE FOOTER -------*/
+
+.mobile-footer .blue-container {
+  padding: 2.5rem;
+  background-color: #1d4370;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.mobile-footer .blue-container img {
+  max-width: 212px;
+}
+
+.mobile-footer .blue-container .title {
+  font-family: "Holcim";
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.mobile-footer .blue-container .text {
+  font-family: "Holcim";
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+}
+
+.mobile-footer .blue-container .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mobile-footer .blue-container .buttons button {
+  font-family: "Holcim";
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  background-color: #04bbf1;
+  color: white;
+  border-radius: 38px;
+  padding: 0.75rem 2.5rem 0.6875rem;
+  text-decoration: none;
+  border: none;
+}
+
+.mobile-footer .blue-container .buttons button:hover {
+  background-color: white;
+  color: #1d4370;
+}
+
+.mobile-footer .blue-container .social-networks-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.mobile-footer .blue-container .social-networks-buttons .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  width: 39px;
+  height: 37px;
+  border-radius: 25px;
+  margin-right: 0.625rem;
+}
+
+.mobile-footer .white-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 1.5rem 2rem;
+}
+
+.mobile-footer .white-container .text {
+  font-family: "Holcim";
+  font-size: 0.875rem;
+}
+
+.mobile-footer .white-container .text-buttons a {
+  font-family: "Holcim";
+  color: black;
+  font-size: 0.875rem;
+  margin: 0.3125rem 0.625rem 0.3125rem 0;
+  text-decoration: none;
+}
+
+.mobile-footer .white-container .text-buttons .separator::after {
+  content: "|";
+  padding-left: 0.625rem;
+}
+
+footer {
+  box-sizing: border-box;
+}

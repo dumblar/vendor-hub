@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Holcim";
+  src: local("Holcim-Regular"),
+    url("./fonts/Holcim-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Holcim-Bold";
+  src: local("Holcim-Bold"), url("./fonts/Holcim-Bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Holcim-HeadlineBlack";
+  src: local("Holcim-HeadlineBlack"),
+    url("./fonts/Holcim-HeadlineBlack.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Holcim-HeadlineLight";
+  src: local("Holcim-HeadlineLight"),
+    url("./fonts/Holcim-HeadlineLight.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Holcim-Italic";
+  src: local("Holcim-Italic"),
+    url("./fonts/Holcim-Italic.ttf") format("opentype");
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

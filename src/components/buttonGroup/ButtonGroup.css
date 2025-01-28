@@ -1,0 +1,185 @@
+.button-group {
+  width: 100vw;
+  height: auto;
+  aspect-ratio: 1440 / 520;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 100vh; 
+  padding: 0;
+}
+
+.button-group .blackCurtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.button-group .content {
+  position: relative;
+  z-index: 2;
+}
+
+.button-group .content .tittle {
+  font-family: "Holcim-Bold";
+  position: relative;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #f9fafb;
+  padding-top: 96px;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.button-group .content .paragraph {
+  font-family: "Holcim";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #f9fafb;
+  text-shadow: 0px 8px 12px rgba(18, 18, 18, 0.3);
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.button-group .button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 3px;
+  padding: 60px;
+}
+
+/* Diseño responsive para pantallas <1280px */
+@media (max-width: 1279px) {
+
+  .button-group .button-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .button-group{
+    height: auto;
+  }
+   
+  .button-service {
+    flex: 0 0 auto;
+    width: 90%; /* Ajustar tamaño del botón */
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .button-group .content .tittle {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .button-group .content .paragraph {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .button-service .texto {
+    display: none;
+  }
+}
+
+.button-service {
+  position: relative;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  width: 304px;
+  height: 84px;
+  opacity: 80%;
+  background-color: #ffffff;
+  border-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button-service .icono img {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.button-service .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.button-service .titulo {
+  font-family: "Holcim-Bold";
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #1d4370;
+  display: block;
+  text-align: left;
+}
+
+.button-service .texto {
+  font-family: "Holcim";
+  font-size: 12px;
+  line-height: 14.4px;
+  font-weight: 400;
+  color: #1d4370;
+  text-align: left;
+}
+
+.button-service::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #94c12e, #04bbf1);
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  z-index: -1;
+}
+
+.button-service:hover::after,
+.button-service.active::after { 
+  opacity: 1;
+}
+
+.button-service:hover,
+.button-service.active { 
+  opacity: 1;
+}
+
+.button-service:hover .titulo,
+.button-service.active .titulo { 
+  font-family: "Holcim-Bold";
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: transparent;
+  background-image: linear-gradient(45deg, #94c12e, #04bbf1, #1d4370);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-image 0.3s ease;
+}

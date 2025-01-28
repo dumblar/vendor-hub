@@ -1,0 +1,521 @@
+/*Placeholder, no es la versión final aún*/
+
+.holcim-header-desktop {
+  display: none;
+  background-color: white;
+  height: 136px;
+  width: 100vw;
+}
+
+.holcim-header-mobile {
+  display: none;
+  background-color: white;
+  height: 76px;
+  width: 100vw;
+}
+
+@media (min-width: 1280px) {
+  .holcim-header-desktop {
+    display: block;
+  }
+}
+
+@media (max-width: 1279px) {
+  .holcim-header-mobile {
+    display: block;
+  }
+}
+
+.holcim-header-desktop .container {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  /* Centra horizontalmente */
+  padding: 1.5625rem 0;
+
+  /* Ancho dinámico basado en puntos de quiebre */
+  max-width: 80rem;
+  /* 1280px por defecto */
+  width: 100%;
+  /* Usa todo el ancho disponible hasta alcanzar max-width */
+  box-sizing: border-box;
+}
+
+@media (min-width: 80rem) {
+
+  /* 1280px */
+  .holcim-header-desktop .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 120rem) {
+
+  /* 1920px */
+  .holcim-header-desktop .container {
+    max-width: 1510px;
+  }
+}
+
+.holcim-header-desktop .container .row {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 0;
+  margin-right: calc(1.5rem * -0.5);
+  height: 86px;
+}
+
+.holcim-header-desktop .container .row .site-logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex: 0 0 auto;
+  width: 33%;
+}
+
+.holcim-header-desktop .container .row .site-logo-wrapper .logo {
+  position: relative;
+  top: 6px;
+}
+
+.holcim-header-desktop .container .row .site-logo-wrapper .country {
+  font-family: "Holcim";
+  color: #8b8d8e;
+  position: relative;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-left: 1.875rem;
+}
+
+.holcim-header-desktop .logo img {
+  max-width: 212px;
+  vertical-align: middle;
+}
+
+.holcim-header-desktop .container .row .right-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 86px;
+  flex: 1;
+  width: auto;
+  padding-right: 12px;
+  box-sizing: border-box;
+}
+
+.holcim-header-desktop .container .row .right-wrapper .top-header {
+  margin-top: 0.625rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+.holcim-header-desktop .container .row .right-wrapper .top-header .top-links-wrapper a {
+  font-family: "Holcim";
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #1d4370;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 0.9375rem;
+  position: relative;
+}
+
+.holcim-header-desktop .container .row .right-wrapper .top-header .top-links-wrapper a::after {
+  content: "";
+  /* Crea el pseudo-elemento */
+  position: absolute;
+  bottom: -4px;
+  /* Ajusta la distancia de la barra al texto */
+  left: 80%;
+  transform: translateX(-87%);
+  width: 0;
+  /* Ancho inicial */
+  height: 3px;
+  /* Grosor de la barra */
+  background-color: #1d4370;
+  /* Color de la barra */
+}
+
+.holcim-header-desktop .container .row .right-wrapper .top-header .top-links-wrapper a:hover::after {
+  width: 80%;
+}
+
+.holcim-header-desktop .container .row .right-wrapper .down-header {
+  margin-bottom: -0.625rem;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+.holcim-header-desktop .down-header .holcim-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.holcim-header-desktop .down-header .holcim-menu li {
+  padding: 0.3125rem 0.625rem;
+  position: relative;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.holcim-header-desktop .down-header .holcim-menu li a {
+  font-family: "Holcim";
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #1d4370;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.holcim-header-desktop .down-header .holcim-menu li::after {
+  content: "";
+  /* Crea el pseudo-elemento */
+  position: absolute;
+  bottom: -4px;
+  /* Ajusta la distancia de la barra al texto */
+  left: 90%;
+  transform: translateX(-94%);
+  width: 0;
+  /* Ancho inicial */
+  height: 3px;
+  /* Grosor de la barra */
+  background-color: #1d4370;
+  /* Color de la barra */
+}
+
+.holcim-header-desktop .down-header .holcim-menu li:hover {
+  transform: translateY(-1px);
+}
+
+.holcim-header-desktop .down-header .holcim-menu li:hover::after {
+  width: 90%;
+}
+
+.holcim-header-mobile .container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.9375rem 1.5rem;
+  max-width: 768px;
+  height: 76px;
+  box-sizing: border-box;
+}
+
+.holcim-header-mobile .container .logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex: 0 0 auto w;
+  width: 33.3333%;
+}
+
+.holcim-header-mobile .container .logo-wrapper .logo img {
+  width: 109px;
+}
+
+.holcim-header-mobile .container .logo-wrapper .country {
+  font-family: "Holcim";
+  color: #8b8d8e;
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  margin-bottom: -0.1875rem;
+  margin-left: 1.25rem;
+}
+
+.holcim-header-mobile .container .right-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.holcim-header-mobile .container .right-wrapper .hamburger {
+  width: 25px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.holcim-header-mobile .container .right-wrapper .hamburger-line {
+  width: 100%;
+  height: 2.5px;
+  background-color: #1d4370;
+  /* Azul oscuro */
+}
+
+.holcim-header-mobile .container .right-wrapper .hamburger-line.two {
+  width: 20px;
+}
+
+.mobile-menu-corporate-border {
+  margin-left: -3rem;
+  margin-top: -1.3rem;
+  width: 200vh;
+  height: 4px;
+  background-color: #1d4370;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.menu-wrapper {
+  width: 320px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  z-index: 999;
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+
+.main-menu {
+  font-weight: bold;
+  padding: 1.875rem 0;
+  font-size: 1.375rem;
+}
+
+
+.item-menu {
+  flex-grow: initial;
+  flex-basis: initial;
+  white-space: normal;
+  overflow: initial;
+  line-height: 1.725rem;
+  font-weight: 400;
+  font-size: larger;
+}
+
+/* Main Menu */
+.main-menu,
+.back-btn {
+  background: #FFFFFF;
+}
+
+.back-btn {
+  font-weight: bold;
+}
+
+/* Responsive Menu */
+.rwd-menu {
+  background: #FFFFFF;
+  position: relative;
+  left: 0;
+  top: -48px;
+  z-index: 1;
+  transition: all 1s ease;
+}
+
+.rwd-menu li:hover {
+  background: #FFFFFF;
+}
+
+
+.rwd-menu li a {
+  display: block;
+  padding: 15px;
+  border-bottom: 1px solid #FFFFFF;
+  color: #404040;
+}
+
+
+/* hide submenu */
+.rwd-submenu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: #FFFFFF;
+  width: 100%;
+  visibility: hidden;
+  transition: all .2s ease;
+}
+
+.open-submenu .rwd-submenu {
+  left: 0;
+  top: 0;
+  z-index: 2;
+  visibility: visible;
+  transition: all .2s ease;
+}
+
+.menu-wrapper {
+  display: none;
+  /* Initially hide the menu */
+  transition: opacity 0.3s ease;
+  /* Smooth transition */
+}
+
+.show-menu {
+  display: block;
+  /* Show the menu */
+  opacity: 1;
+  /* Ensure it's fully visible */
+}
+
+.hide-menu {
+  display: none;
+  /* Hide the menu */
+  opacity: 0;
+  /* Ensure it's fully hidden */
+}
+
+.menu-content hr {
+  opacity: 50%;
+  margin: 2.6rem 0;
+}
+
+/* Menú de pantalla completa debajo del header */
+.fullscreen-menu {
+  position: fixed;
+  top: 76px;
+  /* Altura del header */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 76px);
+  background-color: #ffffff;
+  z-index: 998;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+}
+
+
+/* Menú alineado a la izquierda */
+.menu-content {
+  text-align: left;
+  width: 100%;
+}
+
+.main-menu,
+.secondary-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu li,
+.secondary-menu li {
+  margin: 15px 0;
+}
+
+.main-menu li a,
+.secondary-menu li a {
+  font-family: "Holcim";
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+}
+
+.main-menu li a:hover,
+.secondary-menu li a:hover {
+  text-decoration: underline;
+}
+
+/* Subtítulos */
+.menu-section-title {
+  font-family: "Holcim";
+  font-size: 1rem;
+  color: #8b8d8e;
+  margin-bottom: 10px;
+}
+
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .logo-wrapper .logo img {
+    width: 90px;
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 18px;
+  }
+
+  .hamburger-line {
+    height: 2.5px;
+  }
+
+  .main-menu li a,
+  .secondary-menu li a {
+    font-size: 1.18rem;
+  }
+}
+
+@media (min-width:769px) and (max-width: 1024px) {
+  .fullscreen-menu .menu-content {
+    width: 768px;
+    margin-left: 8rem;
+  }
+
+  .mobile-secundary-menu {
+    font-size: 1.2rem !important;
+  }
+
+}
+
+.main-menu .mobile {
+  font-weight: normal;
+  font-size: 1.18rem;
+}
+
+.main-menu {
+  margin-top: 3rem;
+}
+
+.subMenuTitle {
+  margin: 2rem 0;
+}
+
+.submenu {
+  margin-top: 2.5rem;
+}
+
+.submenu-item {
+  padding-left: 3rem;
+  font-family: "Holcim";
+  font-size: 1.15rem;
+  color: black;
+  margin-top: 3rem;
+}
+
+.separador {
+  margin-top: 1.5rem;
+}
+
+.padding {
+  padding-left: 3rem;
+  margin-top: -1.5rem;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}

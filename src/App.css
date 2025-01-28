@@ -1,0 +1,871 @@
+/* Pantalla de carga */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    250,
+    254,
+    255,
+    0.7
+  ); /* Fondo blanco semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-screen img {
+  width: 100px; /* Tamaño de la imagen de carga */
+  height: 100px;
+}
+
+.corporate_border {
+  height: 18px;
+  background-image: linear-gradient(to right, #94c12e, #04bbf1, #1d4370);
+}
+
+
+.steps-section {
+  padding-top: 48px;
+  padding-right: 96px;
+  padding-bottom: 64px;
+  padding-left: 96px;
+  text-align: center;
+}
+
+.steps-section .sub-box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.steps-section h6 {
+  font-family: "Holcim";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  max-width: 852px;
+  margin: auto;
+  color: #1d4370;
+}
+
+.steps-section .container {
+  display: flex;
+  margin: 3% 10% 0 10%;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* MOSTRAR GIF SOLO EN PANTALLAS GRANDES (>=1280px)*/
+.steps-section .gif-wrapper {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .steps-section .gif-wrapper {
+    display: block;
+  }
+}
+
+@media (max-width: 1279px) {
+  .holcim-header-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .single-step .text-wrapper button {
+    justify-content: center; 
+    padding: 16px 24px; 
+    width: 190px; 
+  }
+}
+
+.steps-section .steps-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.steps-wrapper .single-step {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.single-step .numbers-wrapper h2 {
+  font-family: "Holcim-HeadlineBlack";
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 40px;
+  color: #7784a2;
+  margin: 0;
+}
+
+.single-step .text-wrapper {
+  text-align: left;
+}
+
+.single-step .text-wrapper h6 {
+  font-family: "Holcim-Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1d4370;
+  margin-bottom: 2px;
+}
+.single-step .text-wrapper p {
+  font-family: "Holcim";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #1d4370;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.single-step .text-wrapper button {
+  font-family: "Holcim-Bold";
+  padding: 12px 16px;
+  background-color: #04bbf1;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  color: #fafeff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.8px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.single-step .text-wrapper button .icon {
+  width: 24px; 
+  height: 24px;
+  filter: brightness(0) invert(1); 
+}
+
+.single-step .text-wrapper button:hover {
+  background-color: #1e4d86;
+  transition: background-color 0.5s ease;
+}
+
+.single-step .text-wrapper button:active {
+  background-color: #01668b;
+  transition: background-color 0.1s ease, transform 0.1s ease;
+}
+
+.single-step .text-wrapper button:active .button-text {
+  transform: scale(0.95);
+  transition: background-color 0.1s ease, transform 0.1s ease;
+}
+
+html, body {
+  overflow-x: hidden !important;
+}
+
+/* Poput Config */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: rgba(253, 250, 250, 0.486);
+}
+
+.popup-content {
+  padding: 20px;
+  border-radius: 8px;
+  width: 483px;
+  text-align: left;
+  position: relative; 
+  background-color: #FFFFFF;
+  box-shadow: 0px 6px 15px -2px #12121214;
+
+}
+
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  opacity: 0.7; 
+}
+
+.popup-title {
+  font-family: "Holcim-Bold";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #1D4370;
+  margin: 35px 0px 10px 0px;
+}
+
+.popup-content p {
+  font-family: "Holcim";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8ppx;
+  color: #1D4370;
+  margin-bottom: 5px;
+}
+
+.popup-footer p {
+  font-family: "Holcim-Bold";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.8ppx;
+  color: #1D4370;
+  margin-bottom: 5px;
+}
+
+.footer-link {
+  color: #0098D0;
+  text-decoration: underline; 
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  opacity: 0.8; 
+}
+
+.popup-paragraph {
+  display: flex;             
+  align-items: center;        
+  gap: 8px;                    
+  margin-bottom: 10px;        
+}
+
+.icon-paragraph {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px; 
+}
+
+.popup-paragraph-text {
+  font-family: "Holcim";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  color: #1D4370;
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0; 
+  left: 0;
+}
+
+.popup-wrapper {
+  position: relative;
+  z-index: 1000;
+}
+
+.link-style {
+  color: #007BFF;
+  text-decoration: underline; 
+}
+
+.link-style:hover {
+  color: #0056b3; 
+  text-decoration: none; 
+}
+
+/* ---------- */
+
+button {
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.platforms-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  padding: 48px 96px 64px 96px;
+  background: #e5edf9;
+}
+
+.platforms-section::before,
+.platforms-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(45deg, #94c12e, #04bbf1, #1d4370);
+  z-index: 1;
+}
+
+.platforms-section::before {
+  top: 0;
+}
+
+.platforms-section::after {
+  bottom: 0;
+}
+
+.platforms-section .section-text {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.platforms-section .section-text .tittle {
+  font-family: "Holcim-Bold";
+  font-weight: 700;
+  font-size: 28px;
+  font-size: 36px;
+  color: #1d4370;
+}
+
+.platforms-section .section-text .text {
+  font-family: "Holcim";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1d4370;
+}
+
+.platforms-section .platforms-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;  
+  justify-items: center;
+}
+
+@media (max-width: 767px) {
+  .platforms-section .platforms-boxes {
+    grid-template-columns: 1fr; 
+  }
+}
+
+.platforms-boxes .single-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #fafeff;
+  flex: 0 1 auto;
+  border-radius: 8px;
+  border: 1px solid #e1e4ea;
+  padding: 20px 16px;
+  gap: 16px;
+  box-shadow: 0px 2px 6px #1212120f;
+}
+
+@media (min-width: 1280px) {
+  .platforms-boxes .single-box {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .platforms-boxes .single-box {
+    width: auto;
+  }
+}
+
+.platforms-boxes .single-box .up-part {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.platforms-boxes .single-box .up-part .img-container {
+  border-radius: 4px;
+  background-color: #f9fafb;
+  width: 80px;
+  height: 80px;
+}
+
+.platforms-boxes .single-box .up-part .img-container img {
+  width: 57px;
+  height: 56px;
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+.platforms-boxes .single-box .up-part .section-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.platforms-boxes .single-box .up-part .section-text .tittle {
+  font-family: "Holcim-Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1d4370;
+}
+
+.platforms-boxes .single-box .up-part .section-text .text {
+  font-family: "Holcim";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #1d4370;
+  max-width: 272px;
+}
+
+.platforms-boxes .single-box .down-part {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.platforms-boxes .single-box .down-part button {
+  width: 100%;
+  margin: 0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  border: none;
+  background-color: #04bbf1;
+  font-family: "Holcim-Bold";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.8px;
+  text-align: center;
+  color: #fafeff;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 14px;
+}
+
+.platforms-boxes .single-box .down-part .icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.platforms-boxes .single-box .down-part button:hover {
+  background-color: #1e4d86;
+  transition: background-color 0.5s ease;
+}
+
+.platforms-boxes .single-box .down-part button:active {
+  background-color: #01668b;
+  transition: background-color 0.1s ease, transform 0.1s ease;
+}
+
+.platforms-boxes .single-box .down-part button:active .button-text {
+  transform: scale(0.95);
+  transition: background-color 0.1s ease, transform 0.1s ease;
+}
+
+.platforms-boxes .single-box .down-part .options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.platforms-boxes .single-box .down-part .options-container .option {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  justify-content: space-between;
+  border-bottom: 2px solid #0079a8;
+}
+
+.platforms-boxes .single-box .down-part .options-container .text {
+  font-family: "Holcim";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.4px;
+  color: #0079a8;
+}
+
+.sostenibility-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 48px 96px 96px 96px;
+}
+
+.sostenibility-section .top-part {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sostenibility-section .top-part .title {
+  font-family: "Holcim-Bold";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  color: #1d4370;
+}
+
+.sostenibility-section .top-part .text {
+  font-family: "Holcim";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1d4370;
+}
+
+.sostenibility-section .down-part {
+  background-image: linear-gradient(to right, #94c12e, #04bbf1, #1d4370);
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.sostenibility-section .down-part .content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.sostenibility-section .down-part .content .text {
+  font-family: "Holcim";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #1d4370;
+}
+
+.sostenibility-section .down-part .content .icons-container {
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  flex-direction: row; 
+  gap: 24px;
+  margin: auto;
+  flex-wrap: nowrap;  
+  justify-content: center; 
+}
+
+@media (max-width: 768px) {
+  .sostenibility-section .down-part .content .icons-container {
+    flex-direction: column; 
+    gap: 16px;
+  }
+}
+
+.sostenibility-section .down-part .content .icons-container .single-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  max-width: 213px;
+}
+
+.sostenibility-section .down-part .content .icons-container .single-icon .icon {
+  height: 40px;
+  width: 40px;
+}
+
+.sostenibility-section .down-part .content .icons-container .single-icon .text {
+  font-family: "Holcim";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.8px;
+  text-align: center;
+  color: #7784a2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.single-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.up-part {
+  display: flex;
+  gap: 16px;
+}
+
+.img-container img {
+  width: 40px;
+  height: 40px;
+}
+
+.section-text {
+  flex: 1;
+}
+
+.tittle {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.text {
+  color: #666;
+}
+
+.down-part {
+  margin-top: 16px;
+}
+
+.button-link {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button .icon {
+  margin-left: 8px;
+  width: 12px;
+}
+
+.options-container {
+  position: relative; /* Contexto para las opciones */
+}
+
+.option-wrapper {
+  position: relative; /* Contexto relativo para cada opción */
+  margin-bottom: 8px; /* Espaciado entre las opciones */
+}
+
+
+.dropdown {
+  position: absolute;
+  top: 100%; /* Justo debajo del botón */
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  z-index: 10;
+  width: 100%;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.dropdown-item img {
+  width: 12px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.option:hover {
+  background-color: #f1f1f1;
+}
+
+.arrow {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #007bff;
+  border-bottom: 2px solid #007bff;
+  transform: rotate(45deg); /* Dirección hacia abajo */
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(-135deg); /* Dirección hacia arriba */
+}
+
+
+/* General */
+body {
+  font-family: "Holcim", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Tarjetas (single-box) */
+.single-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #fafeff;
+  border-radius: 8px;
+  border: 1px solid #e1e4ea;
+  padding: 16px;
+  gap: 16px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Ancho máximo para pantallas grandes */
+}
+
+.single-box .up-part {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.single-box .up-part .img-container {
+  flex: 0 0 80px; /* Tamaño fijo para el contenedor de la imagen */
+  height: 80px;
+  background-color: #f9fafb;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-box .up-part .img-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.single-box .up-part .section-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.single-box .down-part {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.single-box .down-part button {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Grid de tarjetas */
+.platforms-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajusta dinámicamente las tarjetas */
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Responsivo para plataformas y herramientas */
+.platforms-section {
+  padding: 48px 16px;
+  background-color: #e5edf9;
+  text-align: center;
+}
+
+.platforms-section .section-text .tittle {
+  font-size: clamp(20px, 4vw, 36px);
+}
+
+.platforms-section .section-text .text {
+  font-size: clamp(14px, 2.5vw, 18px);
+  line-height: 1.5;
+}
+
+/* Steps Section */
+.steps-section {
+  padding: 48px 16px;
+}
+
+.steps-section .sub-box {
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.steps-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .steps-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* Sostenibilidad */
+.sostenibility-section {
+  padding: 48px 16px;
+}
+
+.sostenibility-section .down-part .icons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 24px;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .single-box {
+    max-width: 100%; /* Ancho completo en pantallas pequeñas */
+  }
+
+  .platforms-section {
+    padding: 32px 8px;
+  }
+
+  .steps-section {
+    padding: 32px 8px;
+  }
+
+  .sostenibility-section {
+    padding: 32px 8px;
+  }
+}
